@@ -4,7 +4,7 @@ makeCacheMatrix <- function(input = matrix()) {
         
         # First, we check that the input object is of class matrix
         if(!is.matrix(input)) {
-                stop('Object must be a squeared matrix')
+                stop('Object must be a squared matrix')
         }
         
         # We set the inverted matrix to null as a placeholder for a future value
@@ -48,7 +48,7 @@ cacheSolve <- function(input,...) {
         input$set.inv(inverted)
         inverted
 }
-### Test
+### Test case
 input <- matrix(c(1,0,2,-1,1,0,0,0,1),3,3)
 
 specialmatrix <- makeCacheMatrix(input)
